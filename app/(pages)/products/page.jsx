@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../../(components)/navbar/Navbar';
-import Image from 'next/image';
+import Link from 'next/link';
 
  async function Products({ searchParams }) {
   const searchTerm = searchParams?.search || '';
@@ -41,7 +41,8 @@ import Image from 'next/image';
           filteredProducts.map((product) => (
             <div key={product.id}>
               <div className="h-[200px] bg-[#eee] p-4 bg-white" style={{ width: '200px' }}>
-                <Image
+                <Link href={`/productdetails/${product.id}`}>
+                <img
                   src={product.imageCover}
                   alt={product.title}
                   className="h-[80%]"
@@ -49,6 +50,7 @@ import Image from 'next/image';
                   height={100}
                 />
                 <h1>{product.title}</h1>
+                </Link>
               </div>
             </div>
           ))

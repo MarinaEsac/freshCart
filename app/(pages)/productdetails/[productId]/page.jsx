@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../../../(components)/navbar/Navbar';
-import Image from 'next/image';
 
 export default async function ProductDetailsId({ params }) {
   console.log(params.productId);
@@ -19,7 +18,7 @@ export default async function ProductDetailsId({ params }) {
       <div className="grid h-[635px] bg-[#eee]">
         <div className="flex justify-center items-center w-full">
           <div className="bg-white p-4 text-center">
-            <Image src={objDetails.imageCover} className="w-[350px] mx-auto" alt={objDetails.title} />
+            <img src={objDetails.imageCover} className="w-[350px] mx-auto" alt={objDetails.title} />
             <h6 className="text-center mt-4 font-bold font-serif text-lg">
               {objDetails.title}
             </h6> 
