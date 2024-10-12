@@ -15,6 +15,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-r from-gray-500 to-indigo-600 text-white">
       <header className="p-6 bg-opacity-90 backdrop-blur-sm shadow-md">
+        
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">FreshCart</h1>
           <nav>
